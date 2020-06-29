@@ -27,7 +27,7 @@ class ViewController: UIViewController {
                // couldn't load file :(
            }
        
-       }
+    }
 
     @IBOutlet weak var turnLabel: UILabel!
     @IBOutlet weak var b1: UIButton!
@@ -44,6 +44,10 @@ class ViewController: UIViewController {
    
     
     override func viewDidLoad() {
+        
+        playmusic()
+        
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
@@ -113,15 +117,15 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func reset(_ sender: Any) {
-//        b1.titleLabel?.text = ""
-//        b2.titleLabel?.text = ""
-//        b3.titleLabel?.text = ""
-//        b4.titleLabel?.text = ""
-//        b5.titleLabel?.text = ""
-//        b6.titleLabel?.text = ""
-//        b7.titleLabel?.text = ""
-//        b8.titleLabel?.text = ""
-//        b9.titleLabel?.text = ""
+        b1.titleLabel?.text = ""
+        b2.titleLabel?.text = ""
+        b3.titleLabel?.text = ""
+        b4.titleLabel?.text = ""
+        b5.titleLabel?.text = ""
+        b6.titleLabel?.text = ""
+        b7.titleLabel?.text = ""
+        b8.titleLabel?.text = ""
+        b9.titleLabel?.text = ""
         
         b1.setTitle("", for: .normal)
         b2.setTitle("", for: .normal)
@@ -147,6 +151,8 @@ class ViewController: UIViewController {
         
         }
 
+
+    
 }
 
 
