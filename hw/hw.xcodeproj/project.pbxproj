@@ -49,6 +49,8 @@
 		523C2CFF24A7BFFF0050832A /* hwUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = hwUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		523C2D0324A7BFFF0050832A /* hwUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = hwUITests.swift; sourceTree = "<group>"; };
 		523C2D0524A7BFFF0050832A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		523C2D1E24A9FFF50050832A /* Rhys Lewis - No Right To Love (Acoustic).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Rhys Lewis - No Right To Love (Acoustic).mp3"; sourceTree = "<group>"; };
+		523C2D1F24A9FFF70050832A /* DaniLeigh, G-Eazy - Cravin Instrumental _ Most Accurate + Free FLP [prod. PUDA Beats].mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "DaniLeigh, G-Eazy - Cravin Instrumental _ Most Accurate + Free FLP [prod. PUDA Beats].mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		523C2CE024A7BFFB0050832A /* hw */ = {
 			isa = PBXGroup;
 			children = (
+				523C2D1B24A9FFD10050832A /* New Group */,
 				523C2CE124A7BFFB0050832A /* AppDelegate.swift */,
 				523C2CE324A7BFFB0050832A /* SceneDelegate.swift */,
 				523C2CE524A7BFFB0050832A /* ViewController.swift */,
@@ -126,6 +129,15 @@
 				523C2D0524A7BFFF0050832A /* Info.plist */,
 			);
 			path = hwUITests;
+			sourceTree = "<group>";
+		};
+		523C2D1B24A9FFD10050832A /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				523C2D1E24A9FFF50050832A /* Rhys Lewis - No Right To Love (Acoustic).mp3 */,
+				523C2D1F24A9FFF70050832A /* DaniLeigh, G-Eazy - Cravin Instrumental _ Most Accurate + Free FLP [prod. PUDA Beats].mp3 */,
+			);
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

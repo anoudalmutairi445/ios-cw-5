@@ -8,10 +8,26 @@
 
 import UIKit
 
-
+import AVFoundation
 
 
 class ViewController: UIViewController {
+    
+    
+    var background: AVAudioPlayer?
+       
+       func playmusic(){
+           let path = Bundle.main.path(forResource: "Dean Lewis - Be Alright ( Instrumental ).mp3", ofType:nil)!
+           let url = URL(fileURLWithPath: path)
+
+           do {
+            background = try AVAudioPlayer(contentsOf: url)
+               background?.play()
+           } catch {
+               // couldn't load file :(
+           }
+       
+       }
 
     @IBOutlet weak var turnLabel: UILabel!
     @IBOutlet weak var b1: UIButton!
@@ -25,7 +41,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var b9: UIButton!
     
     var turn = 0
-    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,10 +58,12 @@ class ViewController: UIViewController {
     @IBAction func tap(_ sender: UIButton) {
         if turn % 2 == 0{
                 sender.setTitle("X", for: .normal)
+            sender.setTitleColor(.green, for: .normal)
             turnLabel.text = "O's Turn"
             }
             else{
                 sender.setTitle("O", for : .normal)
+            sender.setTitleColor(.red, for: .normal)
             turnLabel.text = "X's Turn"
 
             }
@@ -59,7 +77,9 @@ class ViewController: UIViewController {
         else if checkWinner(p: "O"){
             okAlert(title: "O Wins!", message: "CONGRADULATIONS 😍")
         }
-        
+        else if turn == 8 {
+            okAlert(title: "No one wins", message: " Restart The Game Please")
+        }
             turn += 1
     }
     
@@ -93,15 +113,15 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func reset(_ sender: Any) {
-        b1.titleLabel?.text = ""
-        b2.titleLabel?.text = ""
-        b3.titleLabel?.text = ""
-        b4.titleLabel?.text = ""
-        b5.titleLabel?.text = ""
-        b6.titleLabel?.text = ""
-        b7.titleLabel?.text = ""
-        b8.titleLabel?.text = ""
-        b9.titleLabel?.text = ""
+//        b1.titleLabel?.text = ""
+//        b2.titleLabel?.text = ""
+//        b3.titleLabel?.text = ""
+//        b4.titleLabel?.text = ""
+//        b5.titleLabel?.text = ""
+//        b6.titleLabel?.text = ""
+//        b7.titleLabel?.text = ""
+//        b8.titleLabel?.text = ""
+//        b9.titleLabel?.text = ""
         
         b1.setTitle("", for: .normal)
         b2.setTitle("", for: .normal)
@@ -124,7 +144,10 @@ class ViewController: UIViewController {
         b9.isUserInteractionEnabled = true
         
         turn = 0
+        
         }
 
 }
+
+
 
